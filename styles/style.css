@@ -1,46 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
 
 
 :root {
-    --color-primario:#D7BDE2  ;
-    --color-secundario: #F6F6F6;
+    --color-primario: ;
+    --color-secundario: #000000;
     --color-terciario: purple;
     --color-hover: #884EA0;
 
     --fuente-krona: 'Krona One', sans-serif;
     --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-playwrite:'Playwrite CU', cursive;
 }
 
 * {
     padding: 0;
     margin:0;
     text-align: center;
+   
+    
 }
+.principal{
+    color:#884EA0;
+    font-size: 30px;
+    font-family:var(--fuente-playwrite);
+    text-decoration: underline;
+
+}
+
+.alert2{
+    overflow: hidden;
+  height: 0;
+  scrollbar-width: hidden;
+    width:0;
+    
+}
+.move_text{/*movimiento de palabras*/
+    color:#884EA0;
+    display: inline-block;
+    font-size: 23px;
+    animation: moveText 30s infinite; /* Ajusta la duración de la animación */
+    transform: translateX (10px); /* Ajusta la distancia de movimiento */
+    /*transform: translate3d(10%);*/
+    font-family:var(--fuente-playwrite);
+    font-weight: weight;
+    font-style: normal;
+    font-optical-sizing: auto;
+}   
 
 body{
     box-sizing: border-box;
     background-color: var(--color-primario);
     color: var(--color-secundario);
+    
 }
 
 .header{
     padding: 2% 0% 0% 15%;
+    
 }
 
 .header__menu{
-    display: flex;
+    display:-letter-spacing;
     gap: 80px;
+    text-align: center;
+    
 }
+
 .header__menu__link{
     font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-terciario);
-    text-decoration: none;
-
+    text-decoration: none; 
 }
-
-
 
 .presentacion {
     padding: 5% 15%;
@@ -53,7 +86,7 @@ body{
 
 .presentacion__contenido{
     width: 50%;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     gap: 40px;
 }
@@ -62,12 +95,12 @@ body{
 .presentacion__contenido__titulo{
     font-size: 1.5rem;
     font-family: var(--fuente-krona);
-    text-decoration: underline;
+    
 }
 
 .titulo-destaque {
     color: var(--color-terciario); 
-    
+ 
 }
 
 .presentacion__contenido__texto{
@@ -81,9 +114,9 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
+    gap: 25px;
 }
-
+/*&nbsp;&nbsp; para hacer espacios entre las palabras*/
 .presentacion__enlaces__subtitulo{
     font-family: var(--fuente-krona);
     font-weight: 400;
@@ -92,14 +125,14 @@ body{
 .presentacion__enlaces__link{
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 10px;
       border: 2px solid var(--color-terciario);
-      width: 50%;
+      width: 40%;/*tamaño botones*/
       text-align: center;
-      border-radius: 8px;
+      border-radius: 60px;/*la forma del boton*/
       font-size: 1.5rem;
       font-weight: 600;
-      padding: 21.5px 0;
+      padding: 20px 0;
       text-decoration: none;
       color: var(--color-secundario);
       font-family: var(--fuente-montserrat);
@@ -109,18 +142,34 @@ body{
     background-color: var(--color-hover);
 }
 .presentacion_imagen{
-    width: 50%;
+        width: 17%;/*tamaño imagen principal*/
+
+}
+.presentacion_imagen_dos{
+    width:50%;
+    
+}
+
+.presentacion_imagen_logo{
+    text-align: center;
+    width: 3%;
+}
+.presentacion_imagen_footer{
+    width: 1%;
+    
 }
 
 .footer{
     color:var(--color-primario);
     background-color: var(--color-terciario);
-    padding: 1.5rem;
+    padding: 0.5rem;
     text-align: center;
     font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
-    font-weight: 150;
+    font-size: 0.8rem;
+    font-weight: 300;
     text-decoration-color: rgb(255, 90, 255);
+   
+    
 }
 @media(max-width:1200px){
     .header{
@@ -139,7 +188,51 @@ body{
     }
 
     .presentacion__contenido{
-        width: auto;/*se adapta al elemento padre */
+        width: auto/*se adapta al elemento padre */
     }
     
+    
+    
 }
+.menu{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    
+    
+    
+}
+
+
+.menu_1{
+padding: 6% 15%;
+display: flex;
+align-items: center;
+justify-content: between;
+gap:32%;
+font-family: var(--fuente-montserrat);
+font-size: 1.5rem;
+font-weight: 600;
+color: var(--color-terciario);
+
+ 
+}
+
+.productos_menu{
+padding: 2% 15%;
+display: flex;
+align-items: center;
+gap:32%x;
+justify-content: between;
+font-family: var(--fuente-montserrat);
+font-size: 1.5rem;
+font-weight: 300;
+color: var(--color-terciario);
+
+     
+}
+
+
+
+
+
+
